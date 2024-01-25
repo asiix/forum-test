@@ -135,3 +135,17 @@ C:\Users\asiix\source\repos\Forum\ForumThreads\obj\Debug\net8.0\refint\ForumThre
 C:\Users\asiix\source\repos\Forum\ForumThreads\obj\Debug\net8.0\ForumThreads.pdb
 C:\Users\asiix\source\repos\Forum\ForumThreads\obj\Debug\net8.0\ForumThreads.genruntimeconfig.cache
 C:\Users\asiix\source\repos\Forum\ForumThreads\obj\Debug\net8.0\ref\ForumThreads.dll
+C:\Users\asiix\source\repos\Forum\ForumThreads\bin\Debug\net8.0\AWSSDK.Core.dll
+C:\Users\asiix\source\repos\Forum\ForumThreads\bin\Debug\net8.0\AWSSDK.SecurityToken.dll
+C:\Users\asiix\source\repos\Forum\ForumThreads\bin\Debug\net8.0\DnsClient.dll
+C:\Users\asiix\source\repos\Forum\ForumThreads\bin\Debug\net8.0\MongoDB.Bson.dll
+C:\Users\asiix\source\repos\Forum\ForumThreads\bin\Debug\net8.0\MongoDB.Driver.dll
+C:\Users\asiix\source\repos\Forum\ForumThreads\bin\Debug\net8.0\MongoDB.Driver.Core.dll
+C:\Users\asiix\source\repos\Forum\ForumThreads\bin\Debug\net8.0\MongoDB.EntityFrameworkCore.dll
+C:\Users\asiix\source\repos\Forum\ForumThreads\bin\Debug\net8.0\MongoDB.Libmongocrypt.dll
+C:\Users\asiix\source\repos\Forum\ForumThreads\bin\Debug\net8.0\SharpCompress.dll
+C:\Users\asiix\source\repos\Forum\ForumThreads\bin\Debug\net8.0\Snappier.dll
+C:\Users\asiix\source\repos\Forum\ForumThreads\bin\Debug\net8.0\ZstdSharp.dll
+C:\Users\asiix\source\repos\Forum\ForumThreads\bin\Debug\net8.0\runtimes\linux\native\libmongocrypt.so
+C:\Users\asiix\source\repos\Forum\ForumThreads\bin\Debug\net8.0\runtimes\osx\native\libmongocrypt.dylib
+C:\Users\asiix\source\repos\Forum\ForumThreads\bin\Debug\net8.0\runtimes\win\native\mongocrypt.dll
