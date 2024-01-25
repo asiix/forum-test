@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "No2enIwRUqQlpMgYJ9lokn6SLnJC5w1wrfDz1lRxToJCOPFYmNaGUu+L9VoyVDsLjeNNBMzYjs2L2fsqj26SRw==",
+  "dgSpecHash": "fDQ/oTC5eX12kx4YKo8jmUhClaJSMi76iDbIj5HdgEPZcGYqzCG80OdRojDErvFRNiRSof6QxA90Y7Kc2zqK1g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\asiix\\source\\repos\\Forum\\Forum\\ForumUsers.csproj",
+  "projectFilePath": "C:\\Users\\asiix\\source\\repos\\Forum\\ProxyHttp\\ProxyHttp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\asiix\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\asiix\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
