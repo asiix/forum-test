@@ -19,7 +19,7 @@ public partial class User
 
     public byte[]? Banner { get; set; }
 
-    public DateTime RegistrationDate { get; set; }
+    public DateTime RegistrationDate { get; set; } = DateTime.Now;
 
     public bool ConfirmedEmail { get; set; }
 
@@ -29,5 +29,5 @@ public partial class User
 
     public DateTime? _2fadate { get; set; }
 
-    public string Role { get; set; } = null!;
+    public string? Role { get; set; }
 }
