@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "qNiI8F+hCsiWXAn8QtaEHHGJxlW3H2JfptOnGQfCgtg=",
+  "Source": "ProxyHttp",
+  "BasePath": "_content/ProxyHttp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
