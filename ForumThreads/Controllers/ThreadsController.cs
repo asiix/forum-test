@@ -41,7 +41,6 @@ namespace ForumThreads.Controllers
         public async Task<IActionResult> Post(ForumThreads.Model.Thread thread)
         {
             await _threadsService.CreateAsync(thread);
-
             return CreatedAtAction(nameof(Get), new { id = thread._id }, thread);
         }
 

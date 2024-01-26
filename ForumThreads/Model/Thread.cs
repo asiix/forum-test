@@ -1,5 +1,7 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Driver;
+using System.Diagnostics.Metrics;
 
 namespace ForumThreads.Model
 {
@@ -14,7 +16,7 @@ namespace ForumThreads.Model
         public string Description { get; set; }
         public string Flair { get; set; }
         public int ThreadScore { get; set; }
-        public DateTime CommentDate { get; set; } = DateTime.UtcNow;
+        public DateTime ThreadCreationDate { get; set; } = DateTime.UtcNow;
         public string CreatorName { get; set; }
         public int CreatorId { get; set; }
         public List<Comment>? Comments { get; set; }

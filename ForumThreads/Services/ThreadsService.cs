@@ -27,12 +27,26 @@ public class ThreadsService
     public async Task<ForumThreads.Model.Thread> GetAsync(string id) =>
         await _threadsCollection.Find(x => x._id == id).FirstOrDefaultAsync();
 
-    public async Task CreateAsync(ForumThreads.Model.Thread thread) =>
+    public async Task CreateAsync(ForumThreads.Model.Thread thread)
+    {
+        thread.ThreadId = GetNextAutoIncrementalId();
         await _threadsCollection.InsertOneAsync(thread);
+    }
 
     public async Task UpdateAsync(string id, ForumThreads.Model.Thread thread) =>
         await _threadsCollection.ReplaceOneAsync(x => x._id == id, thread);
 
     public async Task RemoveAsync(string id) =>
         await _threadsCollection.DeleteOneAsync(x => x._id == id);
+
+    public int GetNextAutoIncrementalId()
+    {
+        var sort = Builders<ForumThreads.Model.Thread>.Sort.Descending(model => model.ThreadId);
+        var lastDocument = _threadsCollection.Find(Builders<ForumThreads.Model.Thread>.Filter.Empty)
+                                     .Sort(sort)
+                                     .Limit(1)
+                                     .FirstOrDefault();
+
+        return lastDocument?.ThreadId + 1 ?? 1;
+    }
 }
