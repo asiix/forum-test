@@ -26,8 +26,8 @@ namespace ForumUsers
             // Add services to the container.
 
             builder.Services.AddControllers().AddJsonOptions(
-                    options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles); 
-            
+                    options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
@@ -60,12 +60,11 @@ namespace ForumUsers
                 .AddEnvironmentVariables();
 
             // Creazione singleton per dependecy injection
-            builder.Services.AddSingleton<Jwt>(provider
-                =>
+            builder.Services.AddSingleton<Jwt>(provider =>
             {
                 var jwt = new Jwt(builder.Configuration["Jwt:Key"],
-                                                     builder.Configuration["Jwt:Issuer"],
-                                                     builder.Configuration["Jwt:Audience"]); return jwt;
+                          builder.Configuration["Jwt:Issuer"],
+                                           builder.Configuration["Jwt:Audience"]); return jwt;
             });
 
             var app = builder.Build();
