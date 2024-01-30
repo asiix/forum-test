@@ -116,7 +116,6 @@ namespace ForumUsers.Controllers
 
         // LOGIN
         // POST: api/Users/Login
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost("Login")]
         public async Task<ActionResult<User>> LoginUser(User model)
         {
@@ -144,6 +143,24 @@ namespace ForumUsers.Controllers
             }
             else
                 return BadRequest("Wrong credentials");
+        }
+
+        // LOGOUT
+        // POST: api/Users/Logout
+        [HttpPost("Logout")]
+        public async Task<ActionResult<User>> LogoutUser(User model)
+        {
+            User user = await RetrieveUserByEmail(model.EmailAddress);
+
+            if (user != null)
+            {
+                return NotFound("You're not logged in");
+            }
+            else
+            {
+                Response.Cookies.Delete("jwtCookie");
+                return Ok("Logged out");
+            }
         }
 
         private bool UserExists(int id)
