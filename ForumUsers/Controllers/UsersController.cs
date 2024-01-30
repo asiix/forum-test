@@ -19,13 +19,16 @@ namespace ForumUsers.Controllers
     public class UsersController : ControllerBase
     {
         private readonly ForumUsersContext _context;
+        private readonly Jwt _jwt;
 
-        public UsersController(ForumUsersContext context)
+        public UsersController(ForumUsersContext context, Jwt jwt)
         {
+            _jwt = jwt;
             _context = context;
         }
 
         // GET: api/Users
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
@@ -131,13 +134,12 @@ namespace ForumUsers.Controllers
             bool canLogin = cryptography.ConfrontKeys(model.PasswordSalt, user.PasswordSalt, user.PasswordHash);
             if (canLogin == true)
             {
-                string token = JwtManager.GenerateJwtToken(user, "bd1a1ccf8095037f361a4d351e7c0de65f0776bfc2f478ea8d312c763bb6caca", "https://localhost:7241", "http://localhost:4200");
+                string token = JwtManager.GenerateJwtToken(user, _jwt.SecretKey ,_jwt.Issuer, _jwt.Audience);
                 Response.Cookies.Append("jwtCookie", token, new CookieOptions
                 {
                     HttpOnly = true,
                     Secure = true,
-                    SameSite = SameSiteMode.Strict,
-                    Expires = DateTimeOffset.UtcNow.AddDays(1)
+                    SameSite = SameSiteMode.Strict
                 });
                 return Ok("Logged in");
             }
@@ -147,20 +149,12 @@ namespace ForumUsers.Controllers
 
         // LOGOUT
         // POST: api/Users/Logout
+        [Authorize]
         [HttpPost("Logout")]
-        public async Task<ActionResult<User>> LogoutUser(User model)
+        public Task<ActionResult> LogoutUser()
         {
-            User user = await RetrieveUserByEmail(model.EmailAddress);
-
-            if (user != null)
-            {
-                return NotFound("You're not logged in");
-            }
-            else
-            {
-                Response.Cookies.Delete("jwtCookie");
-                return Ok("Logged out");
-            }
+            Response.Cookies.Delete("jwtCookie");
+            return Task.FromResult<ActionResult>(Ok("Successful logout"));
         }
 
         private bool UserExists(int id)

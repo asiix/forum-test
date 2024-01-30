@@ -17,15 +17,13 @@ namespace ForumUsers.Authentication
             // Cosa inserire nel token
             var claims = new[]
             {
-                new Claim(ClaimTypes.Name, user.Username),
-                new Claim(ClaimTypes.Role, user.Role),
+                new Claim(ClaimTypes.Role, user.Role)
             };
 
             var token = new JwtSecurityToken(
                 issuer: issuer,
                 audience: audience,
                 claims: claims,
-                expires: DateTime.UtcNow.AddMinutes(1), // Scadenza del token
                 signingCredentials: credentials
             );
 
