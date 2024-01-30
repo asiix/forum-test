@@ -69,7 +69,8 @@ namespace ForumUsers
             {
                 var jwt = new Jwt(builder.Configuration["Jwt:Key"],
                           builder.Configuration["Jwt:Issuer"],
-                                           builder.Configuration["Jwt:Audience"]); return jwt;
+                          builder.Configuration["Jwt:Audience"]); 
+                return jwt;
             });
 
             var app = builder.Build();

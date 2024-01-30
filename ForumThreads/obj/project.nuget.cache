@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "H6qMRSUl7jvzi9+OLs/kgEGeFhchaIW+XNvbxgtrcR6AnMFS4i2wj9TmJ4Kf4QSZA7lqcYiFIEUmC3VMYMuIFg==",
+  "dgSpecHash": "HT4lvLQgkt9p59U2N9NQDdalQ0vT+1Ev4g4JvYphQsvYpZObjRJJs6B/zITTq3tN9L4ojJIEfXBGs23O5d/onw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\asiix\\Source\\Repos\\forum-test\\ForumThreads\\ForumThreads.csproj",
+  "projectFilePath": "C:\\Users\\asiix\\source\\repos\\forum-test\\ForumThreads\\ForumThreads.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\asiix\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\asiix\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",

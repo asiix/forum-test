@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\asiix\\Source\\Repos\\forum-test\\ForumThreads\\ForumThreads.csproj": {}
+    "C:\\Users\\asiix\\source\\repos\\forum-test\\ForumThreads\\ForumThreads.csproj": {}
   },
   "projects": {
-    "C:\\Users\\asiix\\Source\\Repos\\forum-test\\ForumThreads\\ForumThreads.csproj": {
+    "C:\\Users\\asiix\\source\\repos\\forum-test\\ForumThreads\\ForumThreads.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\asiix\\Source\\Repos\\forum-test\\ForumThreads\\ForumThreads.csproj",
+        "projectUniqueName": "C:\\Users\\asiix\\source\\repos\\forum-test\\ForumThreads\\ForumThreads.csproj",
         "projectName": "ForumThreads",
-        "projectPath": "C:\\Users\\asiix\\Source\\Repos\\forum-test\\ForumThreads\\ForumThreads.csproj",
+        "projectPath": "C:\\Users\\asiix\\source\\repos\\forum-test\\ForumThreads\\ForumThreads.csproj",
         "packagesPath": "C:\\Users\\asiix\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\asiix\\Source\\Repos\\forum-test\\ForumThreads\\obj\\",
+        "outputPath": "C:\\Users\\asiix\\source\\repos\\forum-test\\ForumThreads\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\asiix\\AppData\\Roaming\\NuGet\\NuGet.Config",

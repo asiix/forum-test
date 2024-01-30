@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MAjDs/a4kGB1WieRwmu/kUfPtFoMQdaF97N1Cbl8Qcg=",
+  "Hash": "a5zZgTYyQxAQFO9sfr+xSAmW0R3+cTmIV8ZJbqn5buY=",
   "Source": "ForumUsers",
   "BasePath": "_content/ForumUsers",
   "Mode": "Default",
@@ -47,10 +47,10 @@
       "OriginalItemSpec": "C:\\Users\\asiix\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\QuickGrid.razor.js"
     },
     {
-      "Identity": "C:\\Users\\asiix\\Source\\Repos\\forum-test\\ForumUsers\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ForumUsers.styles.css",
+      "Identity": "C:\\Users\\asiix\\source\\repos\\forum-test\\ForumUsers\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ForumUsers.styles.css",
       "SourceId": "ForumUsers",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\asiix\\Source\\Repos\\forum-test\\ForumUsers\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\asiix\\source\\repos\\forum-test\\ForumUsers\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/ForumUsers",
       "RelativePath": "ForumUsers.styles.css",
       "AssetKind": "All",
@@ -63,7 +63,7 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\asiix\\Source\\Repos\\forum-test\\ForumUsers\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ForumUsers.styles.css"
+      "OriginalItemSpec": "C:\\Users\\asiix\\source\\repos\\forum-test\\ForumUsers\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ForumUsers.styles.css"
     }
   ]
 }

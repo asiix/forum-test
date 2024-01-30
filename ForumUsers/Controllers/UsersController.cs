@@ -32,7 +32,6 @@ namespace ForumUsers.Controllers
             return await _context.Users.ToListAsync();
         }
 
-        // WE WILL NEED THIS DONT FUCKING DELETE IM GOING CRAZY AHAHHAHAHA
         // GET: api/Users/5
         [HttpGet("{id}")]
         public async Task<ActionResult<User>> GetUser(int id)
@@ -125,7 +124,6 @@ namespace ForumUsers.Controllers
 
             if (user == null)
             {
-                Console.WriteLine("diocane");
                 return NotFound("User not found.");
             }
 
@@ -134,7 +132,15 @@ namespace ForumUsers.Controllers
             bool canLogin = cryptography.ConfrontKeys(model.PasswordSalt, user.PasswordSalt, user.PasswordHash);
             if (canLogin == true)
             {
-                return Ok(200);
+                string token = JwtManager.GenerateJwtToken(user, "bd1a1ccf8095037f361a4d351e7c0de65f0776bfc2f478ea8d312c763bb6caca", "https://localhost:7241", "http://localhost:4200");
+                Response.Cookies.Append("jwtCookie", token, new CookieOptions
+                {
+                    HttpOnly = true,
+                    Secure = true,
+                    SameSite = SameSiteMode.Strict,
+                    Expires = DateTimeOffset.UtcNow.AddDays(1)
+                });
+                return Ok("Logged in");
             }
             else
                 return BadRequest("Wrong credentials");

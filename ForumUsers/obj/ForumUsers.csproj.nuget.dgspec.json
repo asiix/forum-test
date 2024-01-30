@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\asiix\\Source\\Repos\\forum-test\\ForumUsers\\ForumUsers.csproj": {}
+    "C:\\Users\\asiix\\source\\repos\\forum-test\\ForumUsers\\ForumUsers.csproj": {}
   },
   "projects": {
-    "C:\\Users\\asiix\\Source\\Repos\\forum-test\\ForumUsers\\ForumUsers.csproj": {
+    "C:\\Users\\asiix\\source\\repos\\forum-test\\ForumUsers\\ForumUsers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\asiix\\Source\\Repos\\forum-test\\ForumUsers\\ForumUsers.csproj",
+        "projectUniqueName": "C:\\Users\\asiix\\source\\repos\\forum-test\\ForumUsers\\ForumUsers.csproj",
         "projectName": "ForumUsers",
-        "projectPath": "C:\\Users\\asiix\\Source\\Repos\\forum-test\\ForumUsers\\ForumUsers.csproj",
+        "projectPath": "C:\\Users\\asiix\\source\\repos\\forum-test\\ForumUsers\\ForumUsers.csproj",
         "packagesPath": "C:\\Users\\asiix\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\asiix\\Source\\Repos\\forum-test\\ForumUsers\\obj\\",
+        "outputPath": "C:\\Users\\asiix\\source\\repos\\forum-test\\ForumUsers\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\asiix\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -70,11 +70,11 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.4.0, )"
+              "version": "[6.5.0, )"
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
-              "version": "[7.2.0, )"
+              "version": "[7.3.0, )"
             }
           },
           "imports": [

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\asiix\\Source\\Repos\\forum-test\\ProxyHttp\\ProxyHttp.csproj": {}
+    "C:\\Users\\asiix\\source\\repos\\forum-test\\ProxyHttp\\ProxyHttp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\asiix\\Source\\Repos\\forum-test\\ProxyHttp\\ProxyHttp.csproj": {
+    "C:\\Users\\asiix\\source\\repos\\forum-test\\ProxyHttp\\ProxyHttp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\asiix\\Source\\Repos\\forum-test\\ProxyHttp\\ProxyHttp.csproj",
+        "projectUniqueName": "C:\\Users\\asiix\\source\\repos\\forum-test\\ProxyHttp\\ProxyHttp.csproj",
         "projectName": "ProxyHttp",
-        "projectPath": "C:\\Users\\asiix\\Source\\Repos\\forum-test\\ProxyHttp\\ProxyHttp.csproj",
+        "projectPath": "C:\\Users\\asiix\\source\\repos\\forum-test\\ProxyHttp\\ProxyHttp.csproj",
         "packagesPath": "C:\\Users\\asiix\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\asiix\\Source\\Repos\\forum-test\\ProxyHttp\\obj\\",
+        "outputPath": "C:\\Users\\asiix\\source\\repos\\forum-test\\ProxyHttp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\asiix\\AppData\\Roaming\\NuGet\\NuGet.Config",

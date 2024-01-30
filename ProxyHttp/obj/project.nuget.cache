@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "g3X1XzNWSIkcpg9eHAnvGtunn2j8SVLqlohLkmR8c4VH6VPIsqJsCdnQgQ0Q6vRoCR6BZn7JYz6fDmgAAVHdJg==",
+  "dgSpecHash": "ENjCIcbhhXi6q+ldQPWPnsPQkJVCZvMDQNdUJq4TypKmttk7gWUJjm4lTy0eEtaWr6b5svsC6yWosyhulwHwvA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\asiix\\Source\\Repos\\forum-test\\ProxyHttp\\ProxyHttp.csproj",
+  "projectFilePath": "C:\\Users\\asiix\\source\\repos\\forum-test\\ProxyHttp\\ProxyHttp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\asiix\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\asiix\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
