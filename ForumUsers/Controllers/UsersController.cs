@@ -8,6 +8,9 @@ using Microsoft.EntityFrameworkCore;
 using ForumUsers.Data;
 using ForumUsers.Model;
 using Microsoft.AspNetCore.Authorization;
+using NuGet.ProjectModel;
+using System.Security.Cryptography;
+using ForumUsers.Authentication;
 
 namespace ForumUsers.Controllers
 {
@@ -29,6 +32,7 @@ namespace ForumUsers.Controllers
             return await _context.Users.ToListAsync();
         }
 
+        // WE WILL NEED THIS DONT FUCKING DELETE IM GOING CRAZY AHAHHAHAHA
         // GET: api/Users/5
         [HttpGet("{id}")]
         public async Task<ActionResult<User>> GetUser(int id)
@@ -42,6 +46,7 @@ namespace ForumUsers.Controllers
 
             return user;
         }
+
 
         // PUT: api/Users/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
@@ -79,6 +84,10 @@ namespace ForumUsers.Controllers
         [HttpPost]
         public async Task<ActionResult<User>> PostUser(User user)
         {
+            Cryptography cryptography = new Cryptography();
+            var (salt, hash) = cryptography.GenerateEncryptedKeys(user.PasswordHash);
+            user.PasswordSalt = salt;
+            user.PasswordHash = hash;
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
@@ -99,6 +108,36 @@ namespace ForumUsers.Controllers
             await _context.SaveChangesAsync();
 
             return NoContent();
+        }
+
+        private async Task<User> RetrieveUserByEmail(string email)
+        {
+            return await _context.Users.FirstOrDefaultAsync(u => u.EmailAddress == email);
+        }
+
+        // LOGIN
+        // POST: api/Users/Login
+        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [HttpPost("Login")]
+        public async Task<ActionResult<User>> LoginUser(User model)
+        {
+            User user = await RetrieveUserByEmail(model.EmailAddress);
+
+            if (user == null)
+            {
+                Console.WriteLine("diocane");
+                return NotFound("User not found.");
+            }
+
+            //AUTH LOGIC
+            Cryptography cryptography = new Cryptography();
+            bool canLogin = cryptography.ConfrontKeys(model.PasswordSalt, user.PasswordSalt, user.PasswordHash);
+            if (canLogin == true)
+            {
+                return Ok(200);
+            }
+            else
+                return BadRequest("Wrong credentials");
         }
 
         private bool UserExists(int id)

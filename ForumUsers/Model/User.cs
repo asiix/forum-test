@@ -13,7 +13,7 @@ public partial class User
 
     public string PasswordSalt { get; set; } = null!;
 
-    public string PasswordHash { get; set; } = null!;
+    public string? PasswordHash { get; set; }
 
     public byte[]? Photo { get; set; }
 

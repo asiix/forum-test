@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mrqoNTFGb3FG7NywXBldYRH97DYUFUOw8ooJTtEM2xssM6UnygAFhQgqeLAMyqaOTqNvxDKRL2a2GVtCPHXT1g==",
+  "dgSpecHash": "g3X1XzNWSIkcpg9eHAnvGtunn2j8SVLqlohLkmR8c4VH6VPIsqJsCdnQgQ0Q6vRoCR6BZn7JYz6fDmgAAVHdJg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\asiix\\source\\repos\\Forum\\ProxyHttp\\ProxyHttp.csproj",
+  "projectFilePath": "C:\\Users\\asiix\\Source\\Repos\\forum-test\\ProxyHttp\\ProxyHttp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\asiix\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\asiix\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
@@ -22,6 +22,7 @@
     "C:\\Users\\asiix\\.nuget\\packages\\microsoft.entityframeworkcore.design\\8.0.1\\microsoft.entityframeworkcore.design.8.0.1.nupkg.sha512",
     "C:\\Users\\asiix\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\8.0.1\\microsoft.entityframeworkcore.relational.8.0.1.nupkg.sha512",
     "C:\\Users\\asiix\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\8.0.1\\microsoft.entityframeworkcore.sqlserver.8.0.1.nupkg.sha512",
+    "C:\\Users\\asiix\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\8.0.1\\microsoft.entityframeworkcore.tools.8.0.1.nupkg.sha512",
     "C:\\Users\\asiix\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\asiix\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\asiix\\.nuget\\packages\\microsoft.extensions.caching.memory\\8.0.0\\microsoft.extensions.caching.memory.8.0.0.nupkg.sha512",

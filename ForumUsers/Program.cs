@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using ForumUsers.Authentication;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using ForumUsers.Data;
+using System.Configuration;
+using Microsoft.EntityFrameworkCore;
 
 namespace ForumUsers
 {
@@ -24,6 +27,8 @@ namespace ForumUsers
             });
 
             // Add services to the container.
+            builder.Services.AddDbContext<ForumUsersContext>(options =>
+            options.UseSqlServer(builder.Configuration.GetConnectionString("Forum")));
 
             builder.Services.AddControllers().AddJsonOptions(
                     options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
