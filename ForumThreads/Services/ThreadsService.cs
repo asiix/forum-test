@@ -1,6 +1,7 @@
 ﻿using ForumThreads.Model;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
+using System.Runtime.InteropServices;
 
 namespace ForumThreads.Services;
 
@@ -29,7 +30,6 @@ public class ThreadsService
 
     public async Task CreateAsync(ForumThreads.Model.Thread thread)
     {
-        thread.ThreadId = GetNextAutoIncrementalId();
         await _threadsCollection.InsertOneAsync(thread);
     }
 
@@ -38,15 +38,4 @@ public class ThreadsService
 
     public async Task RemoveAsync(string id) =>
         await _threadsCollection.DeleteOneAsync(x => x._id == id);
-
-    public int GetNextAutoIncrementalId()
-    {
-        var sort = Builders<ForumThreads.Model.Thread>.Sort.Descending(model => model.ThreadId);
-        var lastDocument = _threadsCollection.Find(Builders<ForumThreads.Model.Thread>.Filter.Empty)
-                                     .Sort(sort)
-                                     .Limit(1)
-                                     .FirstOrDefault();
-
-        return lastDocument?.ThreadId + 1 ?? 1;
-    }
 }

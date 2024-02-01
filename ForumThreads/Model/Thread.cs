@@ -10,8 +10,6 @@ namespace ForumThreads.Model
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string? _id { get; set; }
-        
-        public int ThreadId { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public string Flair { get; set; }
@@ -19,6 +17,6 @@ namespace ForumThreads.Model
         public DateTime ThreadCreationDate { get; set; } = DateTime.UtcNow;
         public string CreatorName { get; set; }
         public int CreatorId { get; set; }
-        public List<Comment>? Comments { get; set; }
+        public List<Comment> Comments { get; set; } = [];
     }
 }

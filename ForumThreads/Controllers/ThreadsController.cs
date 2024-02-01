@@ -1,6 +1,7 @@
 ﻿using ForumThreads.Model;
 using ForumThreads.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -11,10 +12,12 @@ namespace ForumThreads.Controllers
     public class ThreadsController : ControllerBase
     {
         private readonly ThreadsService _threadsService;
+        private readonly CommentsService _commentsService;
 
-        public ThreadsController(ThreadsService threadsService)
+        public ThreadsController(ThreadsService threadsService, CommentsService commentsService)
         {
             _threadsService = threadsService;
+            _commentsService = commentsService;
         }
 
         // GET: api/<ThreadsController>

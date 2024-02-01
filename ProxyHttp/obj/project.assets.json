@@ -4435,6 +4435,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Microsoft.EntityFrameworkCore >= 8.0.1",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.1",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.1",
@@ -4447,11 +4448,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\asiix\\Source\\Repos\\forum-test\\ProxyHttp\\ProxyHttp.csproj",
+      "projectUniqueName": "C:\\Users\\asiix\\source\\repos\\forum-test\\ProxyHttp\\ProxyHttp.csproj",
       "projectName": "ProxyHttp",
-      "projectPath": "C:\\Users\\asiix\\Source\\Repos\\forum-test\\ProxyHttp\\ProxyHttp.csproj",
+      "projectPath": "C:\\Users\\asiix\\source\\repos\\forum-test\\ProxyHttp\\ProxyHttp.csproj",
       "packagesPath": "C:\\Users\\asiix\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\asiix\\Source\\Repos\\forum-test\\ProxyHttp\\obj\\",
+      "outputPath": "C:\\Users\\asiix\\source\\repos\\forum-test\\ProxyHttp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\asiix\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4480,6 +4481,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[8.0.1, )"
+          },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",

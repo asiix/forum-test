@@ -18,6 +18,7 @@ namespace ForumThreads
 
             // Add services to the container.
             builder.Services.AddSingleton<ThreadsService>();
+            builder.Services.AddSingleton<CommentsService>();
             builder.Services.AddControllers();
 
             builder.Services.AddDbContext<ForumDbContext>(options =>
