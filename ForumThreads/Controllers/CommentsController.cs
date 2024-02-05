@@ -7,7 +7,7 @@ using System.Threading;
 
 namespace ForumThreads.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class CommentsController : ControllerBase
     {
@@ -21,7 +21,7 @@ namespace ForumThreads.Controllers
         }
 
         // GET api/Threads/1/1
-        [HttpGet("{threadId}/{commentId}")]
+        [HttpGet("getbyid/{threadId}/{commentId}")]
         public async Task<ActionResult<Comment>> Get(string threadId, string commentId)
         {
             var comment = await _commentsService.GetCommentAsync(threadId, commentId);
