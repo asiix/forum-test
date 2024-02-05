@@ -1,0 +1,27 @@
+.container {
+  margin: 100px 200px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30em;
+  border: 1px solid rgb(200, 200, 200);
+  padding: 30px;
+  border-radius: 5%;
+}
+
+mat-form-field {
+  width: 100%;
+  border-radius: 50%;
+}
+
+mat-form-field {
+  background-color: white;
+}
