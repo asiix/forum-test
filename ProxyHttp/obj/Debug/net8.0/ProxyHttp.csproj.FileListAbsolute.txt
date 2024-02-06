@@ -272,3 +272,13 @@ C:\Users\asiix\source\repos\forum-test\ProxyHttp\obj\Debug\net8.0\refint\ProxyHt
 C:\Users\asiix\source\repos\forum-test\ProxyHttp\obj\Debug\net8.0\ProxyHttp.pdb
 C:\Users\asiix\source\repos\forum-test\ProxyHttp\obj\Debug\net8.0\ProxyHttp.genruntimeconfig.cache
 C:\Users\asiix\source\repos\forum-test\ProxyHttp\obj\Debug\net8.0\ref\ProxyHttp.dll
+C:\Users\asiix\source\repos\forum-test\ProxyHttp\bin\Debug\net8.0\ocelot.json
+C:\Users\asiix\source\repos\forum-test\ProxyHttp\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\asiix\source\repos\forum-test\ProxyHttp\bin\Debug\net8.0\IPAddressRange.dll
+C:\Users\asiix\source\repos\forum-test\ProxyHttp\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\asiix\source\repos\forum-test\ProxyHttp\bin\Debug\net8.0\Microsoft.AspNetCore.MiddlewareAnalysis.dll
+C:\Users\asiix\source\repos\forum-test\ProxyHttp\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\asiix\source\repos\forum-test\ProxyHttp\bin\Debug\net8.0\Microsoft.Extensions.DiagnosticAdapter.dll
+C:\Users\asiix\source\repos\forum-test\ProxyHttp\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\asiix\source\repos\forum-test\ProxyHttp\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+C:\Users\asiix\source\repos\forum-test\ProxyHttp\bin\Debug\net8.0\Ocelot.dll
