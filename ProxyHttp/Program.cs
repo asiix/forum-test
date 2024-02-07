@@ -19,7 +19,6 @@ namespace ProxyHttp
             builder.Services.AddOcelot(builder.Configuration);
             var app = builder.Build();
 
-
             app.UseOcelot();
             app.UseHttpsRedirection();
             app.UseAuthorization();

@@ -33,7 +33,7 @@
           "Port": 44325
         }
       ],
-      "UpstreamPathTemplate": "/modifycomment/{threadId}/{commentId}",
+      "UpstreamPathTemplate": "/comments/{threadId}/{commentId}",
       "UpstreamHttpMethod": [ "Put" ]
     },
     {
@@ -45,7 +45,7 @@
           "Port": 44325
         }
       ],
-      "UpstreamPathTemplate": "/deletecomment/{threadId}/{commentId}",
+      "UpstreamPathTemplate": "/comments/{threadId}/{commentId}",
       "UpstreamHttpMethod": [ "Delete" ]
     },
     {

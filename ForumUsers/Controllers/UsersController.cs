@@ -149,7 +149,6 @@ namespace ForumUsers.Controllers
 
         // LOGOUT
         // POST: api/Users/Logout
-        [Authorize]
         [HttpPost("Logout")]
         public Task<ActionResult> LogoutUser()
         {

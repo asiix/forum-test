@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProxyHttp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f62e154691251add92078a3cc86530dff30b2d3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ed44b33879fc7eb8aa2870a34b9a39083179e58e")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProxyHttp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProxyHttp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
