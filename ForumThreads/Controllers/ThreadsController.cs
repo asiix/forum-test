@@ -8,7 +8,7 @@ using System.Threading;
 
 namespace ForumThreads.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class ThreadsController : ControllerBase
     {
@@ -22,13 +22,17 @@ namespace ForumThreads.Controllers
         }
 
         // GET: api/<ThreadsController>
+<<<<<<< HEAD
         [Authorize(Roles = "Admin")]
         [HttpGet]
+=======
+        [HttpGet("get")]
+>>>>>>> 0655fc7e19a550cbbc83c13b5268ff5f21d12137
         public async Task<List<ForumThreads.Model.Thread>> Get() =>
         await _threadsService.GetAsync();
 
         // GET api/<ThreadsController>/5
-        [HttpGet("{id}")]
+        [HttpGet("getbyid/{id}")]
         public async Task<ActionResult<ForumThreads.Model.Thread>> Get(string id)
         {
             var thread = await _threadsService.GetAsync(id);
@@ -42,7 +46,7 @@ namespace ForumThreads.Controllers
         }
 
         // POST api/<ThreadsController>
-        [HttpPost]
+        [HttpPost("create")]
         public async Task<IActionResult> Post(ForumThreads.Model.Thread thread)
         {
             await _threadsService.CreateAsync(thread);
@@ -50,7 +54,7 @@ namespace ForumThreads.Controllers
         }
 
         // PUT api/<ThreadsController>/5
-        [HttpPut("{id}")]
+        [HttpPut("modify/{id}")]
         public async Task<IActionResult> Update(string id, ForumThreads.Model.Thread updatedThread)
         {
             var thread = await _threadsService.GetAsync(id);
@@ -68,7 +72,7 @@ namespace ForumThreads.Controllers
         }
 
         // DELETE api/<ThreadsController>/5
-        [HttpDelete("{id}")]
+        [HttpDelete("delete/{id}")]
         public async Task<IActionResult> Delete(string id)
         {
             var thread = await _threadsService.GetAsync(id);
