@@ -128,7 +128,7 @@
         "AllowedScopes": []
       },
       "RouteClaimsRequirement": {
-        "role": "Admin"
+        "Role": "Admin"
       }
     },
     {

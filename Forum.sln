@@ -12,7 +12,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProxyHttp", "ProxyHttp\Prox
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForumThreads", "ForumThreads\ForumThreads.csproj", "{D19C0EEC-2D8A-437F-BDC4-958B5931C59D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForumUsers", "ForumUsers\ForumUsers.csproj", "{2537B411-9340-45EC-804B-F836295F8A20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForumUsers", "ForumUsers\ForumUsers.csproj", "{2537B411-9340-45EC-804B-F836295F8A20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

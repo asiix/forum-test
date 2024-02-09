@@ -162,14 +162,19 @@ C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\AWSSDK.Secu
 C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\DnsClient.dll
+C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\FluentValidation.dll
 C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Humanizer.dll
+C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\IPAddressRange.dll
 C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
 C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
 C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Forms.dll
 C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Microsoft.AspNetCore.Components.QuickGrid.dll
 C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter.dll
 C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Microsoft.AspNetCore.MiddlewareAnalysis.dll
+C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Microsoft.Build.dll
@@ -193,6 +198,7 @@ C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Microsoft.E
 C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Microsoft.Extensions.DiagnosticAdapter.dll
 C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Microsoft.Identity.Client.dll
 C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
@@ -221,6 +227,7 @@ C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\MongoDB.Ent
 C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\MongoDB.Libmongocrypt.dll
 C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Mono.TextTemplating.dll
 C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
 C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\NuGet.Common.dll
 C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\NuGet.Configuration.dll
 C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\NuGet.DependencyResolver.Core.dll
@@ -230,6 +237,7 @@ C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\NuGet.Packa
 C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\NuGet.ProjectModel.dll
 C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\NuGet.Protocol.dll
 C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\NuGet.Versioning.dll
+C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Ocelot.dll
 C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\SharpCompress.dll
 C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Snappier.dll
 C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
@@ -426,11 +434,3 @@ C:\Users\asiix\source\repos\forum-test\ForumThreads\obj\Debug\net8.0\refint\Foru
 C:\Users\asiix\source\repos\forum-test\ForumThreads\obj\Debug\net8.0\ForumThreads.pdb
 C:\Users\asiix\source\repos\forum-test\ForumThreads\obj\Debug\net8.0\ForumThreads.genruntimeconfig.cache
 C:\Users\asiix\source\repos\forum-test\ForumThreads\obj\Debug\net8.0\ref\ForumThreads.dll
-C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\FluentValidation.dll
-C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\IPAddressRange.dll
-C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
-C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Microsoft.AspNetCore.MiddlewareAnalysis.dll
-C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
-C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Microsoft.Extensions.DiagnosticAdapter.dll
-C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
-C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Ocelot.dll

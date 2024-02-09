@@ -29,7 +29,6 @@ namespace ForumUsers
             // Add services to the container.
             builder.Services.AddDbContext<ForumUsersContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("Forum")));
-
             builder.Services.AddControllers().AddJsonOptions(
                     options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 

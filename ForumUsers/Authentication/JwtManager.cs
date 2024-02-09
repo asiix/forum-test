@@ -3,6 +3,7 @@ using ForumUsers.Model;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Microsoft.AspNetCore.Identity;
 
 namespace ForumUsers.Authentication
 {
@@ -19,19 +20,19 @@ namespace ForumUsers.Authentication
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
             // Cosa inserire nel token
-            var claims = new[]
-            {
-                new Claim(ClaimTypes.Role, user.Role)
-            };
+            var claims = new ClaimsIdentity(new Claim[] {
+                new Claim("Role", user.Role),
+            });
 
             var token = new JwtSecurityToken(
                 issuer: issuer,
                 audience: audience,
-                claims: claims,
+                claims: claims.Claims,
+                expires: DateTime.Now.AddMinutes(120),
                 signingCredentials: credentials
             );
-
             var tokenHandler = new JwtSecurityTokenHandler();
+            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
             return tokenHandler.WriteToken(token);
         }
     }
