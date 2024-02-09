@@ -19,16 +19,15 @@ namespace ForumUsers.Controllers
     public class UsersController : ControllerBase
     {
         private readonly ForumUsersContext _context;
-        private readonly Jwt _jwt;
+        private readonly IConfiguration _configuration;
 
-        public UsersController(ForumUsersContext context, Jwt jwt)
+        public UsersController(ForumUsersContext context, IConfiguration configuration)
         {
-            _jwt = jwt;
+            _configuration = configuration;
             _context = context;
         }
 
         // GET: api/Users
-        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
@@ -134,7 +133,7 @@ namespace ForumUsers.Controllers
             bool canLogin = cryptography.ConfrontKeys(model.PasswordSalt, user.PasswordSalt, user.PasswordHash);
             if (canLogin == true)
             {
-                string token = JwtManager.GenerateJwtToken(user, _jwt.SecretKey ,_jwt.Issuer, _jwt.Audience);
+                string token = JwtManager.GenerateJwtToken(user, _configuration);
                 Response.Cookies.Append("jwtCookie", token, new CookieOptions
                 {
                     HttpOnly = true,
@@ -149,7 +148,6 @@ namespace ForumUsers.Controllers
 
         // LOGOUT
         // POST: api/Users/Logout
-        [Authorize]
         [HttpPost("Logout")]
         public Task<ActionResult> LogoutUser()
         {

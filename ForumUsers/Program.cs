@@ -29,49 +29,12 @@ namespace ForumUsers
             // Add services to the container.
             builder.Services.AddDbContext<ForumUsersContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("Forum")));
-
             builder.Services.AddControllers().AddJsonOptions(
                     options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-
-            // Aggiunta autenticazione JWT
-            builder.Services.AddAuthentication(options =>
-            {
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(o =>
-            {
-                // validazione token
-                o.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ValidIssuer = builder.Configuration["Jwt:Issuer"],
-                    ValidAudience = builder.Configuration["Jwt:Audience"],
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])),
-                    ValidateIssuer = true,
-                    ValidateAudience = true,
-                    ValidateLifetime = true,
-                    ValidateIssuerSigningKey = true
-                };
-            });
-
-            builder.Services.AddAuthorization();
-
-            // Aggiunta configurazione da appsettings.json
-            builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-                .AddEnvironmentVariables();
-
-            // Creazione singleton per dependecy injection
-            builder.Services.AddSingleton<Jwt>(provider =>
-            {
-                var jwt = new Jwt(builder.Configuration["Jwt:Key"],
-                          builder.Configuration["Jwt:Issuer"],
-                          builder.Configuration["Jwt:Audience"]); 
-                return jwt;
-            });
 
             var app = builder.Build();
 
@@ -87,8 +50,7 @@ namespace ForumUsers
             app.UseCors("CorsPolicy");
 
             app.UseAuthorization();
-            IConfiguration configuration = app.Configuration;
-            IWebHostEnvironment environment = app.Environment;
+
 
             app.MapControllers();
 
