@@ -22,7 +22,11 @@
         }
       ],
       "UpstreamPathTemplate": "/comments/{threadId}",
-      "UpstreamHttpMethod": [ "Post" ]
+      "UpstreamHttpMethod": [ "Post" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "DownstreamPathTemplate": "/api/Comments/modify/{threadId}/{commentId}",
@@ -34,7 +38,11 @@
         }
       ],
       "UpstreamPathTemplate": "/comments/{threadId}/{commentId}",
-      "UpstreamHttpMethod": [ "Put" ]
+      "UpstreamHttpMethod": [ "Put" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "DownstreamPathTemplate": "/api/Comments/delete/{threadId}/{commentId}",
@@ -46,7 +54,11 @@
         }
       ],
       "UpstreamPathTemplate": "/comments/{threadId}/{commentId}",
-      "UpstreamHttpMethod": [ "Delete" ]
+      "UpstreamHttpMethod": [ "Delete" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "DownstreamPathTemplate": "/api/Threads",
@@ -58,7 +70,14 @@
         }
       ],
       "UpstreamPathTemplate": "/threads",
-      "UpstreamHttpMethod": [ "Get" ]
+      "UpstreamHttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin"
+      }
     },
     {
       "DownstreamPathTemplate": "/api/Threads/{id}",

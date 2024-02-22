@@ -28,13 +28,18 @@ namespace ForumUsers.Controllers
         }
 
         // GET: api/Users
+        [Authorize]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
+            if (!User.IsInRole("Admin"))
+                return Unauthorized("The user does not have the necessary permission");
+
             return await _context.Users.ToListAsync();
         }
 
         // GET: api/Users/5
+            
         [HttpGet("{id}")]
         public async Task<ActionResult<User>> GetUser(int id)
         {
@@ -99,6 +104,9 @@ namespace ForumUsers.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUser(int id)
         {
+            if(!User.IsInRole("User") && !User.IsInRole("Admin"))
+                return Unauthorized("User must be logged in");
+
             var user = await _context.Users.FindAsync(id);
             if (user == null)
             {

@@ -6,6 +6,7 @@ using System.Text;
 using ForumUsers.Data;
 using System.Configuration;
 using Microsoft.EntityFrameworkCore;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace ForumUsers
 {
@@ -27,6 +28,28 @@ namespace ForumUsers
             });
 
             // Add services to the container.
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer("Bearer", o =>
+            {
+                o.RequireHttpsMetadata = false;
+                o.SaveToken = true;
+                // validazione token
+                o.TokenValidationParameters = new TokenValidationParameters()
+                {
+                    ValidIssuer = builder.Configuration["Jwt:Issuer"],
+                    ValidAudience = builder.Configuration["Jwt:Audience"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])),
+                    ValidateIssuer = false,
+                    ValidateAudience = false,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    RoleClaimType = "Role"
+                };
+            });
+            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
             builder.Services.AddDbContext<ForumUsersContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("Forum")));
             builder.Services.AddControllers().AddJsonOptions(
@@ -48,7 +71,7 @@ namespace ForumUsers
             app.UseHttpsRedirection();
 
             app.UseCors("CorsPolicy");
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
 
@@ -56,5 +79,6 @@ namespace ForumUsers
 
             app.Run();
         }
+
     }
 }

@@ -22,12 +22,7 @@ namespace ForumThreads.Controllers
         }
 
         // GET: api/<ThreadsController>
-<<<<<<< HEAD
-        [Authorize(Roles = "Admin")]
-        [HttpGet]
-=======
         [HttpGet("get")]
->>>>>>> 0655fc7e19a550cbbc83c13b5268ff5f21d12137
         public async Task<List<ForumThreads.Model.Thread>> Get() =>
         await _threadsService.GetAsync();
 

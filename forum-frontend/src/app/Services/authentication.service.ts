@@ -10,7 +10,7 @@ export class AuthenticationService {
 
   //TO FINISH
   Registration(user: User) {
-    this.httpSvc.Create('https://localhost:7241/api/Users', user).subscribe(data => {
+    this.httpSvc.Create('https://localhost:44332/users/register', user).subscribe(data => {
       return data;
     })
   }
