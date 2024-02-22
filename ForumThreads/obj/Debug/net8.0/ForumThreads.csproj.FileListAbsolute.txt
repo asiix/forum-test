@@ -434,3 +434,4 @@ C:\Users\asiix\source\repos\forum-test\ForumThreads\obj\Debug\net8.0\refint\Foru
 C:\Users\asiix\source\repos\forum-test\ForumThreads\obj\Debug\net8.0\ForumThreads.pdb
 C:\Users\asiix\source\repos\forum-test\ForumThreads\obj\Debug\net8.0\ForumThreads.genruntimeconfig.cache
 C:\Users\asiix\source\repos\forum-test\ForumThreads\obj\Debug\net8.0\ref\ForumThreads.dll
+C:\Users\asiix\source\repos\forum-test\ForumThreads\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -3,6 +3,9 @@ using ForumThreads.Services;
 using ForumThreads.Data;
 using MongoDB.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace ForumThreads
 {
@@ -17,6 +20,27 @@ namespace ForumThreads
                 builder.Configuration.GetSection("ForumDatabase"));
 
             // Add services to the container.
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer("Bearer", o =>
+            {
+                o.RequireHttpsMetadata = false;
+                o.SaveToken = true;
+                // validazione token
+                o.TokenValidationParameters = new TokenValidationParameters()
+                {
+                    ValidIssuer = builder.Configuration["Jwt:Issuer"],
+                    ValidAudience = builder.Configuration["Jwt:Audience"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])),
+                    ValidateIssuer = false,
+                    ValidateAudience = false,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    RoleClaimType = "Role"
+                };
+            });
             builder.Services.AddSingleton<ThreadsService>();
             builder.Services.AddSingleton<CommentsService>();
             builder.Services.AddControllers();
@@ -38,7 +62,7 @@ namespace ForumThreads
             }
 
             app.UseHttpsRedirection();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
 
