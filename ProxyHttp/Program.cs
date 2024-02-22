@@ -16,7 +16,6 @@ namespace ProxyHttp
             builder.Logging.ClearProviders()
                 .SetMinimumLevel(0)
                 .AddConsole();
-            var authenticationProviderKey = "Bearer";
             builder.Configuration.AddJsonFile("ocelot.json", optional: false, reloadOnChange: true);
             builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .AddEnvironmentVariables();
@@ -25,7 +24,7 @@ namespace ProxyHttp
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(authenticationProviderKey, o =>
+            }).AddJwtBearer("Bearer", o =>
             {
                 o.RequireHttpsMetadata = false;
                 o.SaveToken = true;
