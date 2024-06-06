@@ -23,10 +23,10 @@ import { User } from '../../Models/User';
 export class RegisterComponent {
   constructor(private auth: AuthenticationService) { }
   hide: boolean = true;
-  username = new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(16)]);
-  email = new FormControl('', [Validators.required, Validators.email]);
-  password = new FormControl('', [Validators.required, Validators.minLength(8), Validators.maxLength(24)]);
-  confirmedPassword = new FormControl('', [Validators.required, Validators.minLength(8), Validators.maxLength(24)]);
+  username = new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(16), Validators.required]);
+  email = new FormControl('', [Validators.required, Validators.email, Validators.required]);
+  password = new FormControl('', [Validators.required, Validators.minLength(8), Validators.maxLength(24), Validators.required]);
+  confirmedPassword = new FormControl('', [Validators.required, Validators.minLength(8), Validators.maxLength(24), Validators.required]);
   user: User = {} as User;
 
   async Register() {
