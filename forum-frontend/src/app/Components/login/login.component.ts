@@ -17,9 +17,9 @@ import { AuthenticationService } from '../../Services/authentication.service';
 export class LoginComponent {
   constructor(private auth: AuthenticationService) { }
   hide = true;
-  email = new FormControl('', [Validators.required, Validators.email]);
-  username = new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(16)]);
-  password = new FormControl('', [Validators.required, Validators.minLength(8), Validators.maxLength(24)]);
+  email = new FormControl('', [Validators.required, Validators.email, Validators.required]);
+  username = new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(16), Validators.required]);
+  password = new FormControl('', [Validators.required, Validators.minLength(8), Validators.maxLength(24), Validators.required]);
   user: User = {} as User;
 
   //REMINDER: to access FormControl variables like email, username and password you MUST do .value
